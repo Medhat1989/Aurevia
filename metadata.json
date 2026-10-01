@@ -1,0 +1,6 @@
+{
+  "name": "Aurevia Aviation",
+  "description": "Private aviation and lifestyle concierge group. Bespoke private jet charter, special missions, and worldwide luxury concierge.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

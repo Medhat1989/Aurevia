@@ -50,7 +50,7 @@ export const Navigation: React.FC<NavigationProps> = ({
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            {/* Zone 1: Single element brand wordmark */}
+            {/* Zone 1: Brand emblem mark */}
             <a
               href="#home"
               onClick={(e) => {
@@ -59,7 +59,7 @@ export const Navigation: React.FC<NavigationProps> = ({
               }}
               className="flex items-center cursor-pointer group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B68A4E]"
             >
-              <AureviaLogo variant="default" size="md" showWordmark={true} />
+              <AureviaLogo variant="default" size="md" />
             </a>
 
             {/* Zone 2: 4-6 clean text navigation links */}

@@ -56,7 +56,7 @@ export const Footer: React.FC<FooterProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand & Mission column */}
           <div className="lg:col-span-2 space-y-4">
-            <AureviaLogo variant="default" size="md" showWordmark={true} />
+            <AureviaLogo variant="default" size="md" />
             <p className="text-xs text-[#F3F0E7]/70 font-light leading-relaxed max-w-sm">
               Private aviation and lifestyle concierge group based in Geneva. Connecting you to what matters through 
               sovereign flight charter, special missions, and worldwide luxury concierge.

@@ -23,7 +23,7 @@ Company Brief:
 - Founded: Geneva, Switzerland in 2014.
 - Core Business: Private aviation and lifestyle concierge group — private jet charter, special missions, and worldwide luxury concierge.
 - Global Operations Hubs: Geneva (HQ, Rue du Rhône), Dubai (DIFC), New York (590 Madison Ave). Desks operate 24/7/365.
-- Direct Emergency Contact: +356 7730 284 | charter@aurevia-aviation.com
+- Direct Emergency Contact: +356 7730 2834 | charter@aurevia-aviation.com
 
 Fleet Architecture:
 1. Light Jets (e.g. Embraer Phenom 300E): 6 passengers, 1,500 nm range, 464 kts. Ideal for Geneva to Nice (38m), London to Zurich (1h 15m), Paris to Milan.
@@ -52,7 +52,7 @@ Pricing & Inclusions:
 
 Instructions:
 - Provide concise, composed answers without fluff or exclamation points.
-- If the user asks about an urgent emergency, injury, accident, or medevac, IMMEDIATELY instruct them to call our 24/7 priority desk at +356 7730 284 or use WhatsApp dispatch.
+- If the user asks about an urgent emergency, injury, accident, or medevac, IMMEDIATELY instruct them to call our 24/7 priority desk at +356 7730 2834 or use WhatsApp dispatch.
 - Always disclose when helpful that human flight directors in Geneva are standing by to lock down slots.
 `;
 
@@ -93,7 +93,7 @@ app.post('/api/chat', async (req, res) => {
     // Fallback response if API key is not configured in environment
     let fallbackReply = 'Understood. Aurevia coordinates private jet charter across all cabin categories, as well as executive helicopters, superyachts, and special missions. Our flight directors in Geneva, Dubai, and New York are ready to structure your itinerary within the hour.';
     if (isUrgent) {
-      fallbackReply = 'CRITICAL NOTICE: For emergency medical evacuation or urgent life-critical transport, our aeromedical operations desk in Geneva is on active standby with wheels-up readiness within 60 minutes. Please call our 24/7 priority line directly (+356 7730 284) or initiate encrypted WhatsApp dispatch.';
+      fallbackReply = 'CRITICAL NOTICE: For emergency medical evacuation or urgent life-critical transport, our aeromedical operations desk in Geneva is on active standby with wheels-up readiness within 60 minutes. Please call our 24/7 priority line directly (+356 7730 2834) or initiate encrypted WhatsApp dispatch.';
     }
 
     return res.json({
@@ -103,7 +103,7 @@ app.post('/api/chat', async (req, res) => {
   } catch (error: any) {
     console.error('Chat error:', error);
     return res.status(500).json({
-      reply: 'Aurevia dispatch is currently experiencing high frequency traffic. Please contact our 24/7 desk directly at +356 7730 284.',
+      reply: 'Aurevia dispatch is currently experiencing high frequency traffic. Please contact our 24/7 desk directly at +356 7730 2834.',
       isUrgentEscalation: true
     });
   }

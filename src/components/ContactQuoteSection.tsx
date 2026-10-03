@@ -157,7 +157,7 @@ export const ContactQuoteSection: React.FC<ContactQuoteSectionProps> = ({
 
                 <div className="pt-4 flex flex-wrap justify-center gap-4">
                   <a
-                    href={`https://wa.me/3567730284?text=Hello%20Aurevia,%20referencing%20dossier%20${submittedReference}.`}
+                    href={`https://wa.me/35677302834?text=Hello%20Aurevia,%20referencing%20dossier%20${submittedReference}.`}
                     target="_blank"
                     rel="noreferrer"
                     className="px-6 py-3 btn-glass-liquid text-[#F3F0E7] rounded-lg text-xs uppercase tracking-wider font-medium inline-flex items-center gap-2 shadow-sm"
@@ -231,7 +231,7 @@ export const ContactQuoteSection: React.FC<ContactQuoteSectionProps> = ({
                     <input
                       type="tel"
                       required
-                      placeholder="+356 7730 284"
+                      placeholder="+356 7730 2834"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full bg-[#12141C] border border-[#1E2436] focus:border-[#B68A4E] rounded-lg py-2.5 px-3 text-xs text-[#F3F0E7] placeholder-[#F3F0E7]/30 outline-none"

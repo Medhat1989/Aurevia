@@ -13,53 +13,34 @@ interface AureviaLogoProps {
 export const AureviaLogo: React.FC<AureviaLogoProps> = ({
   variant = 'default',
   size = 'md',
-  showWordmark = true,
   className = ''
 }) => {
   const [imgSrc, setImgSrc] = useState(aureviaLogoImg);
 
+  // 2x Dimensions for increased presence and visual impact
   const iconDimensions = {
-    sm: 'h-7 w-7',
-    md: 'h-9 w-9',
-    lg: 'h-12 w-12',
-    xl: 'h-16 w-16'
-  }[size];
-
-  const textSize = {
-    sm: 'text-base',
-    md: 'text-lg',
-    lg: 'text-xl',
-    xl: 'text-2xl'
+    sm: 'h-14 w-14',
+    md: 'h-[72px] w-[72px]',
+    lg: 'h-24 w-24',
+    xl: 'h-32 w-32'
   }[size];
 
   const foilEffect = variant === 'brass-foil'
-    ? 'filter drop-shadow-[0_2px_10px_rgba(216,182,131,0.5)] brightness-110 contrast-105'
-    : 'drop-shadow-sm';
+    ? 'filter drop-shadow-[0_2px_12px_rgba(216,182,131,0.55)] brightness-110 contrast-105'
+    : 'drop-shadow-md';
 
   return (
-    <div className={`inline-flex items-center gap-3 select-none ${className}`}>
-      {/* Brand Logo Mark */}
+    <div className={`inline-flex items-center justify-center select-none ${className}`}>
+      {/* 2X Brand Logo Mark without accompanying text */}
       <div className={`relative ${iconDimensions} flex items-center justify-center shrink-0`}>
         <img
           src={imgSrc}
-          alt="Aurevia Aviation Emblem"
+          alt="Aurevia Aviation"
           onError={() => setImgSrc(FALLBACK_LOGO_URL)}
-          className={`w-full h-full object-contain ${foilEffect} transition-transform duration-300`}
+          className={`w-full h-full object-contain ${foilEffect} transition-transform duration-300 hover:scale-105`}
           loading="eager"
         />
       </div>
-
-      {/* Wordmark */}
-      {showWordmark && (
-        <div className="flex flex-col leading-none tracking-tight">
-          <span className={`font-display font-medium tracking-wide ${textSize} text-[#F3F0E7]`}>
-            Aurevia
-          </span>
-          <span className="text-[9px] tracking-[0.28em] uppercase font-sans font-medium text-[#B68A4E] mt-0.5">
-            Aviation
-          </span>
-        </div>
-      )}
     </div>
   );
 };

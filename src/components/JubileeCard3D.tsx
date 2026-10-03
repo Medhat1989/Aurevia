@@ -152,7 +152,7 @@ export const JubileeCard3D: React.FC<JubileeCard3DProps> = ({ onRequestInvite })
               {/* Header: Monogram + EMV Chip + Sovereign Mark */}
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-3">
-                  <AureviaLogo variant="brass-foil" size="md" showWordmark={true} />
+                  <AureviaLogo variant="brass-foil" size="sm" />
                 </div>
                 
                 {/* Simulated metallic foil EMV smart chip */}

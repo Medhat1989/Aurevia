@@ -85,9 +85,9 @@ export const BRAND = {
     'Every Journey, Revered',
     'Aurevia. Rise Above.'
   ],
-  phone: '+356 7730284',
-  phoneDisplay: '+356 7730 284',
-  whatsappUrl: 'https://wa.me/3567730284?text=Hello%20Aurevia%20Aviation,%20I%20would%20like%20to%20inquire%20about%20a%20private%20flight.',
+  phone: '+356 7730 2834',
+  phoneDisplay: '+356 7730 2834',
+  whatsappUrl: 'https://wa.me/35677302834?text=Hello%20Aurevia%20Aviation,%20I%20would%20like%20to%20inquire%20about%20a%20private%20flight.',
   email: 'charter@aurevia-aviation.com',
   foundingYear: '2014',
   headquarters: 'Geneva, Switzerland',

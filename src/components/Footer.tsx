@@ -29,15 +29,15 @@ export const Footer: React.FC<FooterProps> = ({
     <footer className="bg-[#0B0C11] text-[#F3F0E7] border-t border-[#1E2436] pt-20 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Footer Marquee CTA: "Tell us where you're headed." */}
-        <div className="p-8 sm:p-12 rounded-2xl bg-gradient-to-r from-[#1E2436]/60 via-[#12141C] to-[#1E2436]/40 border border-[#B68A4E]/30 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="scroll-reveal p-8 sm:p-12 rounded-2xl bg-gradient-to-r from-[#1E2436]/60 via-[#12141C] to-[#1E2436]/40 border border-[#B68A4E]/30 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="space-y-2 text-center md:text-left">
-            <span className="text-[10px] uppercase tracking-[0.25em] text-[#D8B683] font-medium block">
+            <span className="scroll-reveal-subtle text-[10px] uppercase tracking-[0.25em] text-[#D8B683] font-medium block">
               Direct Route Planning
             </span>
-            <h3 className="font-display text-3xl sm:text-4xl text-[#F3F0E7] font-normal tracking-tight">
+            <h3 className="scroll-reveal-header reveal-delay-100 font-display text-3xl sm:text-4xl text-[#F3F0E7] font-normal tracking-tight">
               Tell us where you’re headed.
             </h3>
-            <p className="text-xs sm:text-sm text-[#F3F0E7]/70 font-light max-w-lg">
+            <p className="scroll-reveal reveal-delay-150 text-xs sm:text-sm text-[#F3F0E7]/70 font-light max-w-lg">
               One call or submission, and the aircraft, crew, and route are already moving. 
               Confirmed within the hour.
             </p>
@@ -53,12 +53,12 @@ export const Footer: React.FC<FooterProps> = ({
         </div>
 
         {/* Multi-Column Nav Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        <div className="scroll-reveal reveal-delay-200 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand & Mission column */}
           <div className="lg:col-span-2 space-y-4">
             <AureviaLogo variant="default" size="md" />
             <p className="text-xs text-[#F3F0E7]/70 font-light leading-relaxed max-w-sm">
-              Private aviation and lifestyle concierge group based in Geneva. Connecting you to what matters through 
+              Private aviation and lifestyle concierge group based in Malta. Connecting you to what matters through 
               sovereign flight charter, special missions, and worldwide luxury concierge.
             </p>
 
@@ -215,7 +215,7 @@ export const Footer: React.FC<FooterProps> = ({
 
         {/* Quiet Copyright notice */}
         <div className="flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#F3F0E7]/40 pt-4 border-t border-[#1E2436]/50">
-          <span>© {new Date().getFullYear()} Aurevia Aviation SA. Geneva, Switzerland. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Aurevia Aviation. Developed by Medhat Khalil</span>
           <span className="font-light italic mt-1 sm:mt-0">
             Aurevia arranges charter transport as an authorized agent for Part 135 & AOC air carriers.
           </span>

@@ -38,23 +38,23 @@ export const HomeIntroSection: React.FC<HomeIntroSectionProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5 space-y-4">
-              <div className="flex items-center gap-3 text-xs tracking-[0.25em] text-[#D8B683] uppercase font-medium">
+              <div className="scroll-reveal-subtle reveal-delay-75 flex items-center gap-3 text-xs tracking-[0.25em] text-[#D8B683] uppercase font-medium">
                 <span className="w-8 h-[1px] bg-[#B68A4E]/60 inline-block" />
                 <span>The Aurevia Paradigm</span>
               </div>
-              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-[#F3F0E7] font-normal tracking-tight leading-tight">
+              <h2 className="scroll-reveal-header reveal-delay-150 font-display text-3xl sm:text-4xl lg:text-5xl text-[#F3F0E7] font-normal tracking-tight leading-tight">
                 Aviation built around your calendar, not an airline’s.
               </h2>
             </div>
 
             <div className="lg:col-span-7 space-y-6 text-sm sm:text-base text-[#F3F0E7]/80 font-light leading-relaxed">
-              <p>
+              <p className="scroll-reveal reveal-delay-200">
                 Commercial travel asks you to plan around it. Aurevia works the other way — we find the aircraft, 
                 the slot, and the route that fit the day you already have. Our team sources from a vetted network 
                 of operators across the globe, so you’re never limited to one fleet or one home base.
               </p>
-              <p>
-                Whether connecting Geneva to Singapore overnight or positioning an air ambulance into an austere 
+              <p className="scroll-reveal reveal-delay-250">
+                Whether connecting Malta to Singapore overnight or positioning an air ambulance into an austere 
                 field, every detail is engineered with quiet competence. No queues, no commercial terminals, and no compromise.
               </p>
             </div>
@@ -63,10 +63,10 @@ export const HomeIntroSection: React.FC<HomeIntroSectionProps> = ({
           {/* 3 Steps: How It Works */}
           <div className="mt-20 pt-16 border-t border-[#1E2436]">
             <div className="text-center max-w-2xl mx-auto mb-14">
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#D8B683] font-medium block">
+              <span className="scroll-reveal-subtle text-[10px] uppercase tracking-[0.25em] text-[#D8B683] font-medium block">
                 The Execution Workflow
               </span>
-              <h3 className="font-display text-2xl sm:text-3xl text-[#F3F0E7] mt-1">
+              <h3 className="scroll-reveal-header reveal-delay-100 font-display text-2xl sm:text-3xl text-[#F3F0E7] mt-1">
                 How It Works
               </h3>
             </div>
@@ -75,7 +75,7 @@ export const HomeIntroSection: React.FC<HomeIntroSectionProps> = ({
               {steps.map((step, idx) => (
                 <div
                   key={idx}
-                  className="p-8 rounded-xl bg-[#1E2436]/40 border border-[#1E2436] space-y-4 relative group hover:border-[#B68A4E]/40 transition-colors"
+                  className={`scroll-reveal reveal-delay-${(idx + 1) * 100} p-8 rounded-xl bg-[#1E2436]/40 border border-[#1E2436] space-y-4 relative group hover:border-[#B68A4E]/40 transition-colors`}
                 >
                   <div className="font-mono text-3xl font-light text-[#B68A4E]/60 group-hover:text-[#D8B683] transition-colors">
                     {step.num}.
@@ -98,14 +98,14 @@ export const HomeIntroSection: React.FC<HomeIntroSectionProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#D8B683] font-medium block">
+              <span className="scroll-reveal-subtle text-[10px] uppercase tracking-[0.25em] text-[#D8B683] font-medium block">
                 Beyond the Runway
               </span>
-              <h3 className="font-display text-3xl text-[#F3F0E7] mt-1">
+              <h3 className="scroll-reveal-header reveal-delay-100 font-display text-3xl text-[#F3F0E7] mt-1">
                 Concierge & Special Missions
               </h3>
             </div>
-            <p className="text-xs text-[#F3F0E7]/60 max-w-md font-light">
+            <p className="scroll-reveal reveal-delay-150 text-xs text-[#F3F0E7]/60 max-w-md font-light">
               From close protection to intensive-care aeromedical evacuation and chartered superyachts.
             </p>
           </div>
@@ -114,7 +114,7 @@ export const HomeIntroSection: React.FC<HomeIntroSectionProps> = ({
             {/* Concierge Teaser Card */}
             <div
               onClick={() => onNavigate('concierge')}
-              className="group cursor-pointer rounded-2xl overflow-hidden border border-[#1E2436] hover:border-[#B68A4E]/40 bg-[#1E2436]/30 transition-all duration-300"
+              className="scroll-reveal reveal-delay-150 group cursor-pointer rounded-2xl overflow-hidden border border-[#1E2436] hover:border-[#B68A4E]/40 bg-[#1E2436]/30 transition-all duration-300"
             >
               <div className="relative h-64 overflow-hidden">
                 <img
@@ -145,7 +145,7 @@ export const HomeIntroSection: React.FC<HomeIntroSectionProps> = ({
             {/* Special Missions Teaser Card */}
             <div
               onClick={() => onNavigate('missions')}
-              className="group cursor-pointer rounded-2xl overflow-hidden border border-[#1E2436] hover:border-rose-500/40 bg-[#1E2436]/30 transition-all duration-300"
+              className="scroll-reveal reveal-delay-250 group cursor-pointer rounded-2xl overflow-hidden border border-[#1E2436] hover:border-rose-500/40 bg-[#1E2436]/30 transition-all duration-300"
             >
               <div className="relative h-64 overflow-hidden">
                 <img
@@ -179,15 +179,15 @@ export const HomeIntroSection: React.FC<HomeIntroSectionProps> = ({
       {/* Membership Teaser Highlighting Jubilee */}
       <section className="py-20 border-b border-[#1E2436] bg-[#0E1017]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="p-8 sm:p-12 rounded-2xl bg-gradient-to-br from-[#1E2436]/60 to-[#12141C] border border-[#B68A4E]/30 flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="scroll-reveal p-8 sm:p-12 rounded-2xl bg-gradient-to-br from-[#1E2436]/60 to-[#12141C] border border-[#B68A4E]/30 flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="space-y-3 max-w-2xl">
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#D8B683] font-medium block">
+              <span className="scroll-reveal-subtle text-[10px] uppercase tracking-[0.25em] text-[#D8B683] font-medium block">
                 The Sovereign Tier
               </span>
-              <h3 className="font-display text-3xl sm:text-4xl text-[#F3F0E7]">
+              <h3 className="scroll-reveal-header reveal-delay-100 font-display text-3xl sm:text-4xl text-[#F3F0E7]">
                 Aurevia Jubilee. By Invitation Only.
               </h3>
-              <p className="text-xs sm:text-sm text-[#F3F0E7]/75 font-light leading-relaxed">
+              <p className="scroll-reveal reveal-delay-150 text-xs sm:text-sm text-[#F3F0E7]/75 font-light leading-relaxed">
                 Guaranteed aircraft availability with zero advance notice. Unlimited global lifestyle management, 
                 confidential manifest handling, and private invitations to sovereign events.
               </p>
@@ -209,14 +209,14 @@ export const HomeIntroSection: React.FC<HomeIntroSectionProps> = ({
       {/* Quote / Principle Band */}
       <section className="py-20 bg-[#12141C] border-b border-[#1E2436] text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-          <span className="text-[10px] uppercase tracking-[0.25em] text-[#D8B683] font-medium block">
+          <span className="scroll-reveal-subtle text-[10px] uppercase tracking-[0.25em] text-[#D8B683] font-medium block">
             Guiding Principle
           </span>
-          <blockquote className="font-display text-2xl sm:text-4xl text-[#F3F0E7] italic font-light max-w-3xl mx-auto leading-relaxed">
+          <blockquote className="scroll-reveal-header reveal-delay-100 font-display text-2xl sm:text-4xl text-[#F3F0E7] italic font-light max-w-3xl mx-auto leading-relaxed">
             “{BRAND.foundingQuote}”
           </blockquote>
-          <p className="text-xs uppercase tracking-widest text-[#F3F0E7]/50 pt-2 font-mono">
-            Aurevia Founding Brief · Geneva, 2014
+          <p className="scroll-reveal-subtle reveal-delay-200 text-xs uppercase tracking-widest text-[#F3F0E7]/50 pt-2 font-mono">
+            Aurevia Founding Brief · Malta, 2014
           </p>
         </div>
       </section>
@@ -226,10 +226,10 @@ export const HomeIntroSection: React.FC<HomeIntroSectionProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <div className="flex items-center justify-between">
             <div>
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#D8B683] font-medium block">
+              <span className="scroll-reveal-subtle text-[10px] uppercase tracking-[0.25em] text-[#D8B683] font-medium block">
                 Editorial
               </span>
-              <h3 className="font-display text-2xl sm:text-3xl text-[#F3F0E7] mt-1">
+              <h3 className="scroll-reveal-header reveal-delay-100 font-display text-2xl sm:text-3xl text-[#F3F0E7] mt-1">
                 From The Journal
               </h3>
             </div>
@@ -243,11 +243,11 @@ export const HomeIntroSection: React.FC<HomeIntroSectionProps> = ({
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {INITIAL_JOURNAL_ARTICLES.slice(0, 3).map((article) => (
+            {INITIAL_JOURNAL_ARTICLES.slice(0, 3).map((article, idx) => (
               <div
                 key={article.id}
                 onClick={() => onNavigate('journal')}
-                className="group cursor-pointer space-y-3"
+                className={`scroll-reveal reveal-delay-${(idx + 1) * 100} group cursor-pointer space-y-3`}
               >
                 <div className="relative h-48 w-full overflow-hidden rounded-lg bg-[#0A0A0A]">
                   <img

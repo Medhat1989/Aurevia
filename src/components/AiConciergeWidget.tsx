@@ -97,7 +97,7 @@ export const AiConciergeWidget: React.FC<AiConciergeWidgetProps> = ({ onOpenQuot
 
       if (isUrgent) {
         reply =
-          'CRITICAL NOTICE: For emergency medical evacuation or urgent life-critical transport, our aeromedical operations desk in Geneva is on active standby with wheels-up readiness within 60 minutes. Please bypass automated chat and call our 24/7 priority line directly or initiate encrypted WhatsApp dispatch.';
+          'CRITICAL NOTICE: For emergency medical evacuation or urgent life-critical transport, our aeromedical operations desk in Malta is on active standby with wheels-up readiness within 60 minutes. Please bypass automated chat and call our 24/7 priority line directly or initiate encrypted WhatsApp dispatch.';
         escalate = true;
       } else if (/geneva.*dubai|dubai.*geneva/i.test(query)) {
         reply =

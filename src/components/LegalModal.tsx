@@ -70,14 +70,14 @@ export const LegalModal: React.FC<LegalModalProps> = ({
           {activeTab === 'privacy' ? (
             <div className="space-y-4">
               <p className="text-xs text-[#F3F0E7]/60">
-                Effective Date: October 2026 · Registered Entity: Aurevia Aviation SA, Geneva, Switzerland.
+                Effective Date: October 2026 · Registered Entity: Aurevia Aviation Ltd, Valletta, Malta.
               </p>
 
               <h4 className="font-display text-base text-[#F3F0E7] font-medium pt-2">
                 1. Sovereign Data Protection Commitment
               </h4>
               <p>
-                Aurevia Aviation operates under the Swiss Federal Act on Data Protection (FADP) and the General Data 
+                Aurevia Aviation operates under the Malta Data Protection Act (Cap. 586) and the General Data 
                 Protection Regulation (GDPR - Regulation EU 2016/679). As an aviation concierge handling high-profile 
                 principals, we recognize that privacy is a core security invariant.
               </p>
@@ -110,7 +110,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
           ) : (
             <div className="space-y-4">
               <p className="text-xs text-[#F3F0E7]/60">
-                Effective Date: October 2026 · Governing Law: Canton of Geneva, Switzerland.
+                Effective Date: October 2026 · Governing Law: Republic of Malta.
               </p>
 
               <h4 className="font-display text-base text-[#F3F0E7] font-medium pt-2">

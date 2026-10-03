@@ -90,19 +90,19 @@ export const JournalSection: React.FC<JournalSectionProps> = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-3 text-xs tracking-[0.25em] text-[#D8B683] uppercase font-medium mb-3">
+            <div className="scroll-reveal-subtle reveal-delay-75 flex items-center gap-3 text-xs tracking-[0.25em] text-[#D8B683] uppercase font-medium mb-3">
               <span className="w-8 h-[1px] bg-[#B68A4E]/60 inline-block" />
               <span>Monthly Publication</span>
             </div>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-[#F3F0E7] font-normal tracking-tight">
+            <h2 className="scroll-reveal-header reveal-delay-150 font-display text-3xl sm:text-4xl lg:text-5xl text-[#F3F0E7] font-normal tracking-tight">
               The Journal.
             </h2>
-            <p className="text-sm sm:text-base text-[#F3F0E7]/70 mt-3 font-light leading-relaxed">
+            <p className="scroll-reveal reveal-delay-200 text-sm sm:text-base text-[#F3F0E7]/70 mt-3 font-light leading-relaxed">
               Essays on aeronautical design, sovereign itineraries, horology, and the quiet philosophy of travel.
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="scroll-reveal reveal-delay-250 flex flex-wrap items-center gap-3">
             {/* CMS / Publishing Desk Trigger */}
             <button
               onClick={() => setCmsOpen(true)}
@@ -127,7 +127,7 @@ export const JournalSection: React.FC<JournalSectionProps> = () => {
         </div>
 
         {/* Filter Bar */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-3 scrollbar-none">
+        <div className="scroll-reveal reveal-delay-300 flex items-center gap-2 overflow-x-auto pb-3 scrollbar-none">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -145,11 +145,11 @@ export const JournalSection: React.FC<JournalSectionProps> = () => {
 
         {/* Articles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {filteredArticles.map((article) => (
+          {filteredArticles.map((article, idx) => (
             <article
               key={article.id}
               onClick={() => setSelectedArticle(article)}
-              className="group cursor-pointer flex flex-col justify-between space-y-4"
+              className={`scroll-reveal reveal-delay-${((idx % 4) + 1) * 100} group cursor-pointer flex flex-col justify-between space-y-4`}
             >
               <div>
                 <div className="relative h-48 w-full overflow-hidden rounded-lg bg-[#0A0A0A] mb-4">
@@ -346,7 +346,7 @@ export const JournalSection: React.FC<JournalSectionProps> = () => {
                   >
                     <option value="Sponsored Feature (Editorial & Photography)">Sponsored Feature (Editorial & Photography)</option>
                     <option value="Bespoke Print & Digital Placement">Bespoke Placement</option>
-                    <option value="Private Event Sponsorship (Geneva / Dubai)">Private Event Sponsorship (Geneva / Dubai)</option>
+                    <option value="Private Event Sponsorship (Malta / Dubai)">Private Event Sponsorship (Malta / Dubai)</option>
                     <option value="Luxury Brand Affiliation / Co-Op">Luxury Brand Affiliation / Co-Op</option>
                   </select>
                 </div>

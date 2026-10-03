@@ -20,9 +20,9 @@ Company Brief:
 - Name: Aurevia Aviation
 - Primary Slogan: Where Sky Meets Certainty.
 - Secondary Lines: Connecting you to what matters; Elevated, By Design; The Art of Arrival; Precision Has Wings.
-- Founded: Geneva, Switzerland in 2014.
+- Founded: Malta in 2014.
 - Core Business: Private aviation and lifestyle concierge group — private jet charter, special missions, and worldwide luxury concierge.
-- Global Operations Hubs: Geneva (HQ, Rue du Rhône), Dubai (DIFC), New York (590 Madison Ave). Desks operate 24/7/365.
+- Global Operations Hubs: Malta (HQ, Valletta), Dubai (DIFC), New York (590 Madison Ave). Desks operate 24/7/365.
 - Direct Emergency Contact: +356 7730 2834 | charter@aurevia-aviation.com
 
 Fleet Architecture:
@@ -53,7 +53,7 @@ Pricing & Inclusions:
 Instructions:
 - Provide concise, composed answers without fluff or exclamation points.
 - If the user asks about an urgent emergency, injury, accident, or medevac, IMMEDIATELY instruct them to call our 24/7 priority desk at +356 7730 2834 or use WhatsApp dispatch.
-- Always disclose when helpful that human flight directors in Geneva are standing by to lock down slots.
+- Always disclose when helpful that human flight directors in Malta are standing by to lock down slots.
 `;
 
 // In-memory store for quotes & inquiries
@@ -91,9 +91,9 @@ app.post('/api/chat', async (req, res) => {
     }
 
     // Fallback response if API key is not configured in environment
-    let fallbackReply = 'Understood. Aurevia coordinates private jet charter across all cabin categories, as well as executive helicopters, superyachts, and special missions. Our flight directors in Geneva, Dubai, and New York are ready to structure your itinerary within the hour.';
+    let fallbackReply = 'Understood. Aurevia coordinates private jet charter across all cabin categories, as well as executive helicopters, superyachts, and special missions. Our flight directors in Malta, Dubai, and New York are ready to structure your itinerary within the hour.';
     if (isUrgent) {
-      fallbackReply = 'CRITICAL NOTICE: For emergency medical evacuation or urgent life-critical transport, our aeromedical operations desk in Geneva is on active standby with wheels-up readiness within 60 minutes. Please call our 24/7 priority line directly (+356 7730 2834) or initiate encrypted WhatsApp dispatch.';
+      fallbackReply = 'CRITICAL NOTICE: For emergency medical evacuation or urgent life-critical transport, our aeromedical operations desk in Malta is on active standby with wheels-up readiness within 60 minutes. Please call our 24/7 priority line directly (+356 7730 2834) or initiate encrypted WhatsApp dispatch.';
     }
 
     return res.json({

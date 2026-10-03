@@ -116,22 +116,22 @@ export const ContactQuoteSection: React.FC<ContactQuoteSectionProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Section Header */}
         <div className="max-w-3xl">
-          <div className="flex items-center gap-3 text-xs tracking-[0.25em] text-[#D8B683] uppercase font-medium mb-3">
+          <div className="scroll-reveal-subtle reveal-delay-75 flex items-center gap-3 text-xs tracking-[0.25em] text-[#D8B683] uppercase font-medium mb-3">
             <span className="w-8 h-[1px] bg-[#B68A4E]/60 inline-block" />
             <span>Flight Desk & Concierge Dispatch</span>
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-[#F3F0E7] font-normal tracking-tight">
+          <h2 className="scroll-reveal-header reveal-delay-150 font-display text-3xl sm:text-4xl lg:text-5xl text-[#F3F0E7] font-normal tracking-tight">
             Tell us where you’re headed.
           </h2>
-          <p className="text-sm sm:text-base text-[#F3F0E7]/70 mt-3 font-light leading-relaxed">
-            Every itinerary is built from scratch by senior dispatchers in Geneva, Dubai, and New York. 
+          <p className="scroll-reveal reveal-delay-200 text-sm sm:text-base text-[#F3F0E7]/70 mt-3 font-light leading-relaxed">
+            Every itinerary is built from scratch by senior dispatchers in Malta, Dubai, and New York. 
             Options returned within 60 minutes with transparent, all-inclusive pricing.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Form Container */}
-          <div className="lg:col-span-8 bg-[#1E2436]/40 border border-[#1E2436] rounded-2xl p-6 sm:p-10 shadow-2xl">
+          <div className="scroll-reveal reveal-delay-250 lg:col-span-8 bg-[#1E2436]/40 border border-[#1E2436] rounded-2xl p-6 sm:p-10 shadow-2xl">
             {submittedReference ? (
               <div className="py-12 text-center space-y-6 animate-fade-in">
                 <div className="w-16 h-16 mx-auto rounded-full bg-[#B68A4E]/20 border border-[#B68A4E] flex items-center justify-center">
@@ -250,7 +250,7 @@ export const ContactQuoteSection: React.FC<ContactQuoteSectionProps> = ({
                       <input
                         type="text"
                         required
-                        placeholder="e.g. Geneva Cointrin (LSGG)"
+                        placeholder="e.g. Malta Luqa (LMML)"
                         value={formData.departure}
                         onChange={(e) => setFormData({ ...formData, departure: e.target.value })}
                         className="w-full bg-[#12141C] border border-[#1E2436] focus:border-[#B68A4E] rounded-lg py-2.5 pl-9 pr-3 text-xs text-[#F3F0E7] placeholder-[#F3F0E7]/30 outline-none"
@@ -448,7 +448,7 @@ export const ContactQuoteSection: React.FC<ContactQuoteSectionProps> = ({
                 <span className="uppercase tracking-wider text-[11px]">Manifest Confidentiality</span>
               </div>
               <p>
-                Passenger manifests and travel itineraries are protected under strict Swiss data banking privacy standards. 
+                Passenger manifests and travel itineraries are protected under strict Maltese and EU data banking privacy standards. 
                 We never publicize client identities or tail numbers.
               </p>
             </div>

@@ -36,7 +36,7 @@ export const CookieConsent: React.FC<CookieConsentProps> = ({ onOpenPrivacy }) =
       </div>
 
       <p className="font-light leading-relaxed">
-        Aurevia uses strictly essential technical cookies to ensure seamless dispatch tracking and authenticated concierge preferences in compliance with Swiss and EU data protection standards.
+        Aurevia uses strictly essential technical cookies to ensure seamless dispatch tracking and authenticated concierge preferences in compliance with Maltese and EU data protection standards.
       </p>
 
       <div className="flex items-center justify-between gap-3 pt-1">

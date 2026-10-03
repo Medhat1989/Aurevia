@@ -30,14 +30,14 @@ export const MembershipSection: React.FC<MembershipSectionProps> = ({ onSelectTi
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
         {/* Section Header */}
         <div className="max-w-3xl">
-          <div className="flex items-center gap-3 text-xs tracking-[0.25em] text-[#D8B683] uppercase font-medium mb-3">
+          <div className="scroll-reveal-subtle reveal-delay-75 flex items-center gap-3 text-xs tracking-[0.25em] text-[#D8B683] uppercase font-medium mb-3">
             <span className="w-8 h-[1px] bg-[#B68A4E]/60 inline-block" />
             <span>The Aurevia Register</span>
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-[#F3F0E7] font-normal tracking-tight">
+          <h2 className="scroll-reveal-header reveal-delay-150 font-display text-3xl sm:text-4xl lg:text-5xl text-[#F3F0E7] font-normal tracking-tight">
             Elevated membership. Built on guaranteed access.
           </h2>
-          <p className="text-sm sm:text-base text-[#F3F0E7]/70 mt-3 font-light leading-relaxed">
+          <p className="scroll-reveal reveal-delay-200 text-sm sm:text-base text-[#F3F0E7]/70 mt-3 font-light leading-relaxed">
             Unlike fractional ownership models that tie capital to depreciating hulls, an Aurevia membership 
             guarantees immediate access across the global operator network with transparent hourly rates and 
             white-glove lifestyle management.
@@ -45,7 +45,7 @@ export const MembershipSection: React.FC<MembershipSectionProps> = ({ onSelectTi
         </div>
 
         {/* DISTINCT JUBILEE BLACK CARD HERO MOMENT */}
-        <div>
+        <div className="scroll-reveal reveal-delay-250">
           <JubileeCard3D onRequestInvite={() => setInviteModalOpen(true)} />
         </div>
 
@@ -53,23 +53,23 @@ export const MembershipSection: React.FC<MembershipSectionProps> = ({ onSelectTi
         <div className="space-y-8">
           <div className="border-t border-[#1E2436] pt-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
-              <span className="text-[11px] uppercase tracking-[0.25em] text-[#D8B683] font-medium block">
+              <span className="scroll-reveal-subtle text-[11px] uppercase tracking-[0.25em] text-[#D8B683] font-medium block">
                 Progressive Flight Tiers
               </span>
-              <h3 className="font-display text-2xl sm:text-3xl text-[#F3F0E7] mt-1">
+              <h3 className="scroll-reveal-header reveal-delay-100 font-display text-2xl sm:text-3xl text-[#F3F0E7] mt-1">
                 Bronze through Diamond
               </h3>
             </div>
-            <p className="text-xs text-[#F3F0E7]/60 max-w-md font-light">
+            <p className="scroll-reveal reveal-delay-150 text-xs text-[#F3F0E7]/60 max-w-md font-light">
               Structured around flight frequency, guaranteed dispatch windows, and repositioning fee waivers.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {standardTiers.map((tier) => (
+            {standardTiers.map((tier, idx) => (
               <div
                 key={tier.id}
-                className="bg-[#1E2436]/40 hover:bg-[#1E2436]/70 border border-[#1E2436] hover:border-[#B68A4E]/40 rounded-xl p-6 transition-all duration-300 flex flex-col justify-between"
+                className={`scroll-reveal reveal-delay-${(idx + 1) * 100} bg-[#1E2436]/40 hover:bg-[#1E2436]/70 border border-[#1E2436] hover:border-[#B68A4E]/40 rounded-xl p-6 transition-all duration-300 flex flex-col justify-between`}
               >
                 <div>
                   <div className="flex items-center justify-between pb-3 border-b border-[#1E2436]">
@@ -137,7 +137,7 @@ export const MembershipSection: React.FC<MembershipSectionProps> = ({ onSelectTi
                   Dossier Received
                 </h3>
                 <p className="text-xs sm:text-sm text-[#F3F0E7]/70 font-light leading-relaxed max-w-sm mx-auto">
-                  Your confidential inquiry has been routed directly to the Managing Partner in Geneva. An executive liaison will initiate discreet contact within two business hours.
+                  Your confidential inquiry has been routed directly to the Managing Partner in Malta. An executive liaison will initiate discreet contact within two business hours.
                 </p>
                 <button
                   onClick={() => {

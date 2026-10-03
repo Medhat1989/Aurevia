@@ -47,13 +47,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-8 sm:pt-16">
         <div className="max-w-3xl space-y-6">
           {/* Eyebrow */}
-          <div className="flex items-center gap-3 text-xs tracking-[0.28em] text-[#D8B683] uppercase font-medium">
+          <div className="scroll-reveal-subtle reveal-delay-100 flex items-center gap-3 text-xs tracking-[0.28em] text-[#D8B683] uppercase font-medium">
             <span className="w-8 h-[1px] bg-[#B68A4E] inline-block" />
             <span>Private charter, without compromise</span>
           </div>
 
           {/* Primary Headline with text-wrap: balance */}
-          <div className="space-y-2">
+          <div className="scroll-reveal-header reveal-delay-150 space-y-2">
             <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl text-[#F3F0E7] font-normal tracking-tight leading-[1.08] [text-wrap:balance]">
               {sloganOptions[currentSloganIdx]}
             </h1>
@@ -80,13 +80,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
 
           {/* Subhead */}
-          <p className="text-sm sm:text-base lg:text-lg text-[#F3F0E7]/80 font-light leading-relaxed max-w-2xl">
+          <p className="scroll-reveal reveal-delay-200 text-sm sm:text-base lg:text-lg text-[#F3F0E7]/80 font-light leading-relaxed max-w-2xl">
             Aurevia arranges private flights for people who measure time in minutes, not hours. 
             One call, and the aircraft, crew, and route are already moving.
           </p>
 
           {/* Primary & Secondary CTAs */}
-          <div className="pt-2 flex flex-wrap items-center gap-4">
+          <div className="scroll-reveal reveal-delay-250 pt-2 flex flex-wrap items-center gap-4">
             <button
               onClick={onRequestQuote}
               className="px-7 py-3.5 btn-glass-liquid-brass font-medium text-xs tracking-wider uppercase rounded-lg cursor-pointer inline-flex items-center gap-2 shadow-lg"
@@ -104,22 +104,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
 
           {/* Side Note Quote */}
-          <div className="pt-4 flex items-center gap-3 text-xs text-[#F3F0E7]/60 font-light max-w-xl border-l border-[#B68A4E]/50 pl-4 py-1">
+          <div className="scroll-reveal reveal-delay-300 pt-4 flex items-center gap-3 text-xs text-[#F3F0E7]/60 font-light max-w-xl border-l border-[#B68A4E]/50 pl-4 py-1">
             <Globe className="w-4 h-4 text-[#B68A4E] shrink-0" />
             <span>
-              Based in Geneva, flying six continents. Every itinerary built from scratch, confirmed within the hour.
+              Based in Malta, flying six continents. Every itinerary built from scratch, confirmed within the hour.
             </span>
           </div>
         </div>
 
         {/* Quick Quote Estimator Integration */}
-        <div className="mt-14 max-w-5xl">
+        <div className="scroll-reveal reveal-delay-350 mt-14 max-w-5xl">
           <QuickQuoteEstimator onConfigureCharter={onConfigureCharter} />
         </div>
       </div>
 
       {/* Trust & Guarantee Indicators */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-12 pt-6 border-t border-[#F3F0E7]/10 flex flex-wrap items-center justify-between text-xs text-[#F3F0E7]/60 gap-4">
+      <div className="scroll-reveal reveal-delay-400 relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-12 pt-6 border-t border-[#F3F0E7]/10 flex flex-wrap items-center justify-between text-xs text-[#F3F0E7]/60 gap-4">
         <div className="flex items-center gap-2">
           <Clock className="w-3.5 h-3.5 text-[#B68A4E]" />
           <span>Average Quote Turnaround: 38 Minutes</span>

@@ -90,13 +90,13 @@ export const BRAND = {
   whatsappUrl: 'https://wa.me/35677302834?text=Hello%20Aurevia%20Aviation,%20I%20would%20like%20to%20inquire%20about%20a%20private%20flight.',
   email: 'charter@aurevia-aviation.com',
   foundingYear: '2014',
-  headquarters: 'Geneva, Switzerland',
+  headquarters: 'Valletta, Malta',
   foundingQuote: 'The best flight is the one you never had to think about.',
   commitment: 'Every itinerary built from scratch, confirmed within the hour.'
 };
 
 export const GLOBAL_HUBS = [
-  { city: 'Geneva', country: 'Switzerland', timeZone: 'Europe/Zurich', address: 'Rue du Rhône 42, 1204 Genève', role: 'Global Headquarters & Dispatch' },
+  { city: 'Valletta', country: 'Malta', timeZone: 'Europe/Malta', address: 'Republic Street 58, Valletta, Malta', role: 'Global Headquarters & Dispatch' },
   { city: 'Dubai', country: 'UAE', timeZone: 'Asia/Dubai', address: 'Gate Precinct 4, DIFC, Dubai', role: 'Middle East & Asia-Pacific Desk' },
   { city: 'New York', country: 'United States', timeZone: 'America/New_York', address: '590 Madison Avenue, New York, NY', role: 'Americas Operations Desk' }
 ];
@@ -510,7 +510,7 @@ export const INITIAL_JOURNAL_ARTICLES: JournalArticle[] = [
     content: [
       'There is a pervasive misconception that luxury must announce itself with loud gold leaf, ostentatious branding, and performative displays. In private aviation, that approach is the mark of an amateur.',
       'Our clients—heads of enterprise, sovereign families, and humanitarian leaders—desire the exact inverse. They want aircraft with quiet, tasteful liveries. They want discreet FBO exits that bypass commercial glare. They want crews who understand the art of respectful silence.',
-      'When Aurevia was founded in Geneva in 2014, our brief was a single sentence: "The best flight is the one you never had to think about." That principle still governs every contract, every flight plan, and every hire.',
+      'When Aurevia was founded in Malta in 2014, our brief was a single sentence: "The best flight is the one you never had to think about." That principle still governs every contract, every flight plan, and every hire.',
       'When everything works exactly as promised, luxury becomes invisible. It simply feels like certainty.'
     ],
     featuredImage: heroTarmac

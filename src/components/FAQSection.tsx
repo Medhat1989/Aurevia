@@ -30,21 +30,21 @@ export const FAQSection: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-2 text-xs tracking-[0.25em] text-[#D8B683] uppercase font-medium mb-3">
+          <div className="scroll-reveal-subtle reveal-delay-75 inline-flex items-center gap-2 text-xs tracking-[0.25em] text-[#D8B683] uppercase font-medium mb-3">
             <span className="w-6 h-[1px] bg-[#B68A4E]/60 inline-block" />
             <span>Operational Inquiries</span>
             <span className="w-6 h-[1px] bg-[#B68A4E]/60 inline-block" />
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl text-[#F3F0E7] font-normal tracking-tight">
+          <h2 className="scroll-reveal-header reveal-delay-150 font-display text-3xl sm:text-4xl text-[#F3F0E7] font-normal tracking-tight">
             Frequently Addressed Questions
           </h2>
-          <p className="text-xs sm:text-sm text-[#F3F0E7]/70 mt-2 font-light">
+          <p className="scroll-reveal reveal-delay-200 text-xs sm:text-sm text-[#F3F0E7]/70 mt-2 font-light">
             Clear standards, transparent commitments, and operational certainty.
           </p>
         </div>
 
         {/* Search and Category Control */}
-        <div className="space-y-4">
+        <div className="scroll-reveal reveal-delay-250 space-y-4">
           <div className="relative">
             <Search className="w-4 h-4 text-[#B68A4E] absolute left-3.5 top-3.5 pointer-events-none" />
             <input
@@ -85,7 +85,7 @@ export const FAQSection: React.FC = () => {
               return (
                 <div
                   key={idx}
-                  className="bg-[#1E2436]/30 border border-[#1E2436] rounded-xl overflow-hidden transition-colors"
+                  className={`scroll-reveal reveal-delay-${((idx % 4) + 1) * 75} bg-[#1E2436]/30 border border-[#1E2436] rounded-xl overflow-hidden transition-colors`}
                 >
                   <button
                     onClick={() => toggleAccordion(idx)}

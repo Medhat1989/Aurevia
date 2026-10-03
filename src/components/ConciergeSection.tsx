@@ -33,14 +33,14 @@ export const ConciergeSection: React.FC<ConciergeSectionProps> = ({ onRequestSer
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Section Header */}
         <div className="max-w-3xl">
-          <div className="flex items-center gap-3 text-xs tracking-[0.25em] text-[#D8B683] uppercase font-medium mb-3">
+          <div className="scroll-reveal-subtle reveal-delay-75 flex items-center gap-3 text-xs tracking-[0.25em] text-[#D8B683] uppercase font-medium mb-3">
             <span className="w-8 h-[1px] bg-[#B68A4E]/60 inline-block" />
             <span>Lifestyle & Mobility Integration</span>
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-[#F3F0E7] font-normal tracking-tight">
+          <h2 className="scroll-reveal-header reveal-delay-150 font-display text-3xl sm:text-4xl lg:text-5xl text-[#F3F0E7] font-normal tracking-tight">
             An unbroken continuum of service.
           </h2>
-          <p className="text-sm sm:text-base text-[#F3F0E7]/70 mt-3 font-light leading-relaxed">
+          <p className="scroll-reveal reveal-delay-200 text-sm sm:text-base text-[#F3F0E7]/70 mt-3 font-light leading-relaxed">
             Private aviation is only the central axis. Aurevia orchestrates executive protection, maritime charters, 
             presidential hotel suites, private estates, and chauffeured mobility so your transit remains uninterrupted 
             from departure doorstep to final arrival.
@@ -49,10 +49,10 @@ export const ConciergeSection: React.FC<ConciergeSectionProps> = ({ onRequestSer
 
         {/* 6 Concierge Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {CONCIERGE_SERVICES.map((service) => (
+          {CONCIERGE_SERVICES.map((service, idx) => (
             <div
               key={service.id}
-              className="bg-[#1E2436]/40 hover:bg-[#1E2436]/70 border border-[#1E2436] hover:border-[#B68A4E]/40 rounded-xl p-6 transition-all duration-300 flex flex-col justify-between group"
+              className={`scroll-reveal reveal-delay-${((idx % 3) + 1) * 100} bg-[#1E2436]/40 hover:bg-[#1E2436]/70 border border-[#1E2436] hover:border-[#B68A4E]/40 rounded-xl p-6 transition-all duration-300 flex flex-col justify-between group`}
             >
               <div>
                 <div className="flex items-center justify-between pb-4 border-b border-[#1E2436]">

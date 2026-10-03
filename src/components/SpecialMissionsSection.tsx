@@ -27,21 +27,21 @@ export const SpecialMissionsSection: React.FC<SpecialMissionsSectionProps> = ({ 
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-3 text-xs tracking-[0.25em] text-[#D8B683] uppercase font-medium mb-3">
+            <div className="scroll-reveal-subtle reveal-delay-75 flex items-center gap-3 text-xs tracking-[0.25em] text-[#D8B683] uppercase font-medium mb-3">
               <span className="w-8 h-[1px] bg-[#B68A4E]/60 inline-block" />
               <span>Special Operations & Aeromedical</span>
             </div>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-[#F3F0E7] font-normal tracking-tight">
+            <h2 className="scroll-reveal-header reveal-delay-150 font-display text-3xl sm:text-4xl lg:text-5xl text-[#F3F0E7] font-normal tracking-tight">
               Special Missions. When every minute carries consequence.
             </h2>
-            <p className="text-sm sm:text-base text-[#F3F0E7]/70 mt-3 font-light leading-relaxed">
+            <p className="scroll-reveal reveal-delay-200 text-sm sm:text-base text-[#F3F0E7]/70 mt-3 font-light leading-relaxed">
               Operating outside the commercial sphere. Aurevia coordinates humanitarian airlift, intensive care 
               aeromedical evacuations, and sovereign government delegations under strict compliance and rapid-launch protocols.
             </p>
           </div>
 
           {/* Urgent Medevac Direct Hotline Banner */}
-          <div className="p-4 sm:p-5 rounded-xl bg-gradient-to-r from-[#1E2436] to-[#12141C] border border-rose-500/30 flex items-center justify-between gap-4 max-w-md w-full">
+          <div className="scroll-reveal reveal-delay-250 p-4 sm:p-5 rounded-xl bg-gradient-to-r from-[#1E2436] to-[#12141C] border border-rose-500/30 flex items-center justify-between gap-4 max-w-md w-full">
             <div className="flex items-center gap-3">
               <div className="p-2.5 rounded-full bg-rose-500/20 text-rose-400 border border-rose-500/30 animate-pulse">
                 <HeartPulse className="w-5 h-5" />
@@ -67,10 +67,10 @@ export const SpecialMissionsSection: React.FC<SpecialMissionsSectionProps> = ({ 
 
         {/* 3 Special Mission Pillars */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {SPECIAL_MISSIONS.map((mission) => (
+          {SPECIAL_MISSIONS.map((mission, idx) => (
             <div
               key={mission.id}
-              className={`bg-[#12141C] border rounded-xl p-7 flex flex-col justify-between transition-all duration-300 ${
+              className={`scroll-reveal reveal-delay-${(idx + 1) * 100} bg-[#12141C] border rounded-xl p-7 flex flex-col justify-between transition-all duration-300 ${
                 mission.id === 'medevac'
                   ? 'border-rose-500/40 shadow-lg shadow-rose-950/20'
                   : 'border-[#1E2436] hover:border-[#B68A4E]/40'

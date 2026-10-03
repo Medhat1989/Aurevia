@@ -14,8 +14,10 @@ import { Footer } from './components/Footer';
 import { AiConciergeWidget } from './components/AiConciergeWidget';
 import { LegalModal } from './components/LegalModal';
 import { CookieConsent } from './components/CookieConsent';
+import { useScrollRevealObserver } from './hooks/useScrollRevealObserver';
 
 export default function App() {
+  useScrollRevealObserver();
   const [currentSection, setCurrentSection] = useState('home');
   const [legalModalOpen, setLegalModalOpen] = useState(false);
   const [legalTab, setLegalTab] = useState<'privacy' | 'terms'>('privacy');

@@ -12,10 +12,10 @@ interface QuickQuoteEstimatorProps {
 }
 
 const PRESET_ROUTES = [
-  { from: 'Geneva (LSGG)', to: 'Nice Côte d’Azur (LFMN)', distNm: 185, time: '38 min', rec: 'Light Jet' },
+  { from: 'Malta Luqa (LMML)', to: 'Nice Côte d’Azur (LFMN)', distNm: 620, time: '1h 35m', rec: 'Light Jet' },
+  { from: 'Malta Luqa (LMML)', to: 'Dubai Al Maktoum (DWC)', distNm: 2210, time: '4h 50m', rec: 'Midsize Jet' },
   { from: 'London Luton (EGGW)', to: 'Zurich Kloten (LSZH)', distNm: 460, time: '1h 15m', rec: 'Light Jet' },
   { from: 'Paris Le Bourget (LFPB)', to: 'New York Teterboro (KTEB)', distNm: 3150, time: '7h 45m', rec: 'Heavy Jet' },
-  { from: 'Dubai Al Maktoum (DWC)', to: 'Geneva (LSGG)', distNm: 2680, time: '5h 40m', rec: 'Midsize Jet' },
   { from: 'Geneva (LSGG)', to: 'Courchevel Altiport (LFLJ)', distNm: 60, time: '30 min', rec: 'Executive Helicopter' },
   { from: 'New York (KTEB)', to: 'Miami Opa-locka (KOPF)', distNm: 950, time: '2h 35m', rec: 'Midsize Jet' }
 ];
@@ -36,7 +36,7 @@ export const QuickQuoteEstimator: React.FC<QuickQuoteEstimatorProps> = ({ onConf
   };
 
   const handleProceed = () => {
-    const origin = isCustom ? customOrigin || 'Geneva (LSGG)' : activeRoute.from;
+    const origin = isCustom ? customOrigin || 'Malta Luqa (LMML)' : activeRoute.from;
     const destination = isCustom ? customDestination || 'Nice (LFMN)' : activeRoute.to;
     const recommendedClass = isCustom ? (passengers > 8 ? 'Heavy Jet' : passengers > 5 ? 'Midsize Jet' : 'Light Jet') : activeRoute.rec;
 

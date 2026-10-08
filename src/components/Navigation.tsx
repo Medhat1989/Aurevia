@@ -26,7 +26,7 @@ export const Navigation: React.FC<NavigationProps> = ({
   }, []);
 
   const navLinks = [
-    { id: 'fleet', label: 'Fleet' },
+    { id: 'fleet', label: 'Aircraft Network' },
     { id: 'membership', label: 'Membership' },
     { id: 'concierge', label: 'Concierge' },
     { id: 'missions', label: 'Special Missions' },

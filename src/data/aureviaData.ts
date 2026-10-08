@@ -1,7 +1,10 @@
-import heroTarmac from '@/src/assets/images/hero_private_jet_tarmac_1790872685796.jpg';
+import heroTarmac from '@/src/assets/images/hero_aircraft_clean_1791495340081.jpg';
+import lightJetImg from '@/src/assets/images/light_jet_clean_1791495352068.jpg';
+import heavyJetImg from '@/src/assets/images/heavy_jet_clean_1791495361632.jpg';
 import fleetInterior from '@/src/assets/images/fleet_cabin_interior_1790872698392.jpg';
+import helicopterImg from '@/src/assets/images/helicopter_clean_1791495383008.jpg';
 import conciergeYacht from '@/src/assets/images/concierge_yacht_helicopter_1790872712698.jpg';
-import specialMissionsImg from '@/src/assets/images/special_missions_aircraft_1790872724587.jpg';
+import specialMissionsImg from '@/src/assets/images/special_missions_clean_1791495372402.jpg';
 
 export interface Aircraft {
   id: string;
@@ -74,9 +77,9 @@ export interface FAQItem {
 
 export const BRAND = {
   name: 'Aurevia Aviation',
-  primarySlogan: 'Where sky meets certainty.',
+  primarySlogan: 'Connect you to what matters',
   secondarySlogans: [
-    'Connecting you to what matters',
+    'Where sky meets certainty',
     'Elevated, By Design',
     'The Art of Arrival',
     'Fly Ahead of Tomorrow',
@@ -96,9 +99,7 @@ export const BRAND = {
 };
 
 export const GLOBAL_HUBS = [
-  { city: 'Valletta', country: 'Malta', timeZone: 'Europe/Malta', address: 'Republic Street 58, Valletta, Malta', role: 'Global Headquarters & Dispatch' },
-  { city: 'Dubai', country: 'UAE', timeZone: 'Asia/Dubai', address: 'Gate Precinct 4, DIFC, Dubai', role: 'Middle East & Asia-Pacific Desk' },
-  { city: 'New York', country: 'United States', timeZone: 'America/New_York', address: '590 Madison Avenue, New York, NY', role: 'Americas Operations Desk' }
+  { city: 'Valletta', country: 'Malta', timeZone: 'Europe/Malta', address: 'Republic Street 58, Valletta, Malta', role: 'Global Headquarters & 24/7 Operations Desk' }
 ];
 
 export const FLEET_DATA: Aircraft[] = [
@@ -122,7 +123,7 @@ export const FLEET_DATA: Aircraft[] = [
       { label: 'Cabin Sound Level', value: 'Ultra-low acoustic dampening' },
       { label: 'Seating Configuration', value: 'Club seating + belted lavatory' }
     ],
-    image: heroTarmac
+    image: lightJetImg
   },
   {
     id: 'midsize-jet',
@@ -144,7 +145,7 @@ export const FLEET_DATA: Aircraft[] = [
       { label: 'Berthable Seats', value: '2 fully flat sleep berths' },
       { label: 'Baggage Access', value: 'In-flight accessible compartment' }
     ],
-    image: fleetInterior
+    image: heroTarmac
   },
   {
     id: 'super-midsize-jet',
@@ -166,7 +167,7 @@ export const FLEET_DATA: Aircraft[] = [
       { label: 'Entertainment', value: '4K cinema monitors & wireless charging' },
       { label: 'Crew', value: 'Two pilots + Cabin Host upon request' }
     ],
-    image: heroTarmac
+    image: fleetInterior
   },
   {
     id: 'heavy-jet',
@@ -188,7 +189,7 @@ export const FLEET_DATA: Aircraft[] = [
       { label: 'Hot Galley', value: 'Dual convection oven & wine cellar' },
       { label: 'Dedicated Crew', value: 'Captain, First Officer, Executive Flight Attendant' }
     ],
-    image: fleetInterior
+    image: specialMissionsImg
   },
   {
     id: 'ultra-long-range',
@@ -210,7 +211,7 @@ export const FLEET_DATA: Aircraft[] = [
       { label: 'Cabin Altitude', value: '2,900 ft lowest cabin altitude in the industry' },
       { label: 'Shower Suite', value: 'Full stand-up private en-suite shower' }
     ],
-    image: heroTarmac
+    image: heavyJetImg
   },
   {
     id: 'helicopter',
@@ -232,7 +233,7 @@ export const FLEET_DATA: Aircraft[] = [
       { label: 'Luggage Capacity', value: 'Fits full ski equipment & hard luggage' },
       { label: 'Sound Rating', value: 'Whisper-quiet cabin insulation' }
     ],
-    image: conciergeYacht
+    image: helicopterImg
   }
 ];
 
@@ -561,8 +562,8 @@ export const FAQ_DATA: FAQItem[] = [
   },
   {
     category: 'Safety',
-    question: 'Is Aurevia an operator, or a broker?',
-    answer: 'Aurevia functions as an elite private aviation and concierge group. We manage select client-entrusted aircraft and maintain an rigorously audited network of licensed Part 135 / Part 121 (or equivalent European AOC) operators. This structure allows us to offer clients unconstrained access to thousands of aircraft worldwide rather than limiting you to a single local fleet.'
+    question: 'Does Aurevia operate its own fleet, or maintain a network of providers?',
+    answer: 'Aurevia does not operate a fleet. Instead, we have a network of providers and vetted Part 135 / Part 121 (or equivalent European AOC) air carriers. This provider network model allows us to offer our clients unconstrained global access to thousands of pristine aircraft worldwide, without the geographic limitations or overhead of owning a single localized fleet.'
   },
   {
     category: 'Safety',

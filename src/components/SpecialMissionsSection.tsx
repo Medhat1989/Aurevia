@@ -21,7 +21,7 @@ export const SpecialMissionsSection: React.FC<SpecialMissionsSectionProps> = ({ 
   };
 
   return (
-    <section id="missions" className="py-24 bg-[#0A0A0D] relative border-b border-[#1E2436]">
+    <section id="missions" className="py-24 bg-[#0A0A0D]/85 backdrop-blur-md relative border-b border-[#1E2436]/60">
       {/* Subtle top subtle border glow to delineate serious tone */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Section Header */}
@@ -140,7 +140,7 @@ export const SpecialMissionsSection: React.FC<SpecialMissionsSectionProps> = ({ 
               </h4>
             </div>
             <p className="text-xs text-[#F3F0E7]/60 max-w-sm font-light">
-              We operate exclusively through accredited international flight operators meeting unyielding audit benchmarks.
+              We have a network of providers meeting unyielding audit benchmarks across accredited international flight operators.
             </p>
           </div>
 

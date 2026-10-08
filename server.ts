@@ -18,14 +18,14 @@ Tone: Composed, precise, understated luxury. No exclamation marks, no aggressive
 
 Company Brief:
 - Name: Aurevia Aviation
-- Primary Slogan: Where Sky Meets Certainty.
-- Secondary Lines: Connecting you to what matters; Elevated, By Design; The Art of Arrival; Precision Has Wings.
+- Primary Slogan: Connect you to what matters
+- Secondary Lines: Where sky meets certainty; Elevated, By Design; The Art of Arrival; Precision Has Wings.
 - Founded: Malta in 2014.
 - Core Business: Private aviation and lifestyle concierge group — private jet charter, special missions, and worldwide luxury concierge.
-- Global Operations Hubs: Malta (HQ, Valletta), Dubai (DIFC), New York (590 Madison Ave). Desks operate 24/7/365.
+- Headquarters & Operations Hub: Valletta, Malta (Republic Street 58). Centralized 24/7/365 flight operations desk.
 - Direct Emergency Contact: +356 7730 2834 | charter@aurevia-aviation.com
 
-Fleet Architecture:
+Provider Network & Aircraft Categories (Aurevia does not operate a fleet; we have an extensive network of accredited providers):
 1. Light Jets (e.g. Embraer Phenom 300E): 6 passengers, 1,500 nm range, 464 kts. Ideal for Geneva to Nice (38m), London to Zurich (1h 15m), Paris to Milan.
 2. Midsize Jets (e.g. Praetor 500): 8 passengers, 2,850 nm range, stand-up 6ft flat floor cabin. Typical: Geneva to Dubai (5h 40m), London to Athens, New York to Miami.
 3. Super-Midsize (e.g. Challenger 3500): 10 passengers, 3,400 nm range, zero-gravity Nuage seats, transcontinental reach.
@@ -91,7 +91,7 @@ app.post('/api/chat', async (req, res) => {
     }
 
     // Fallback response if API key is not configured in environment
-    let fallbackReply = 'Understood. Aurevia coordinates private jet charter across all cabin categories, as well as executive helicopters, superyachts, and special missions. Our flight directors in Malta, Dubai, and New York are ready to structure your itinerary within the hour.';
+    let fallbackReply = 'Understood. Aurevia coordinates private jet charter across all cabin categories, as well as executive helicopters, superyachts, and special missions. Our flight directors at our Maltese headquarters are ready to structure your itinerary within the hour.';
     if (isUrgent) {
       fallbackReply = 'CRITICAL NOTICE: For emergency medical evacuation or urgent life-critical transport, our aeromedical operations desk in Malta is on active standby with wheels-up readiness within 60 minutes. Please call our 24/7 priority line directly (+356 7730 2834) or initiate encrypted WhatsApp dispatch.';
     }

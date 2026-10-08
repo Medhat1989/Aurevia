@@ -85,7 +85,7 @@ export const JournalSection: React.FC<JournalSectionProps> = () => {
   };
 
   return (
-    <section id="journal" className="py-24 bg-[#12141C] relative border-b border-[#1E2436]">
+    <section id="journal" className="py-24 bg-[#12141C]/80 backdrop-blur-md relative border-b border-[#1E2436]/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -346,7 +346,7 @@ export const JournalSection: React.FC<JournalSectionProps> = () => {
                   >
                     <option value="Sponsored Feature (Editorial & Photography)">Sponsored Feature (Editorial & Photography)</option>
                     <option value="Bespoke Print & Digital Placement">Bespoke Placement</option>
-                    <option value="Private Event Sponsorship (Malta / Dubai)">Private Event Sponsorship (Malta / Dubai)</option>
+                    <option value="Private Event Sponsorship (Malta)">Private Event Sponsorship (Malta)</option>
                     <option value="Luxury Brand Affiliation / Co-Op">Luxury Brand Affiliation / Co-Op</option>
                   </select>
                 </div>

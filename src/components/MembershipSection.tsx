@@ -26,7 +26,7 @@ export const MembershipSection: React.FC<MembershipSectionProps> = ({ onSelectTi
   };
 
   return (
-    <section id="membership" className="py-24 bg-[#12141C] relative border-b border-[#1E2436]">
+    <section id="membership" className="py-24 bg-[#12141C]/80 backdrop-blur-md relative border-b border-[#1E2436]/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
         {/* Section Header */}
         <div className="max-w-3xl">

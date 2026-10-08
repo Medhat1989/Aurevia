@@ -40,7 +40,7 @@ export const AircraftDetailModal: React.FC<AircraftDetailModalProps> = ({
           {/* Title overlay */}
           <div className="absolute bottom-5 left-6 right-6">
             <span className="text-[11px] uppercase tracking-[0.25em] text-[#D8B683] font-medium block">
-              {aircraft.category} Fleet Detail
+              {aircraft.category} Category Specification
             </span>
             <h3 className="font-display text-2xl sm:text-3xl text-[#F3F0E7] mt-0.5">
               {aircraft.name}

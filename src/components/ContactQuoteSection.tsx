@@ -112,7 +112,7 @@ export const ContactQuoteSection: React.FC<ContactQuoteSectionProps> = ({
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#12141C] relative border-b border-[#1E2436]">
+    <section id="contact" className="py-24 bg-[#12141C]/80 backdrop-blur-md relative border-b border-[#1E2436]/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Section Header */}
         <div className="max-w-3xl">
@@ -124,7 +124,7 @@ export const ContactQuoteSection: React.FC<ContactQuoteSectionProps> = ({
             Tell us where you’re headed.
           </h2>
           <p className="scroll-reveal reveal-delay-200 text-sm sm:text-base text-[#F3F0E7]/70 mt-3 font-light leading-relaxed">
-            Every itinerary is built from scratch by senior dispatchers in Malta, Dubai, and New York. 
+            Every itinerary is built from scratch by senior dispatchers at our Maltese headquarters. 
             Options returned within 60 minutes with transparent, all-inclusive pricing.
           </p>
         </div>
@@ -267,7 +267,7 @@ export const ContactQuoteSection: React.FC<ContactQuoteSectionProps> = ({
                       <input
                         type="text"
                         required
-                        placeholder="e.g. Nice Côte d'Azur (LFMN) or Dubai (DWC)"
+                        placeholder="e.g. Nice Côte d'Azur (LFMN) or Zurich (LSZH)"
                         value={formData.destination}
                         onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
                         className="w-full bg-[#12141C] border border-[#1E2436] focus:border-[#B68A4E] rounded-lg py-2.5 pl-9 pr-3 text-xs text-[#F3F0E7] placeholder-[#F3F0E7]/30 outline-none"

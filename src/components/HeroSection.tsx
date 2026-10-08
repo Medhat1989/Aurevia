@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import heroJetSunset from '../assets/images/hero_sunset_gulfstream_1790877788736.jpg';
+import heroAircraft from '../assets/images/hero_aircraft_clean_1791495340081.jpg';
 import { QuickQuoteEstimator } from './QuickQuoteEstimator';
 import { BRAND } from '../data/aureviaData';
 import { ArrowRight, Globe, Shield, Clock, Sparkles } from 'lucide-react';
@@ -30,37 +30,73 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
   return (
     <section id="home" className="relative min-h-screen pt-28 pb-16 flex flex-col justify-between overflow-hidden">
-      {/* Background Photography with Measured Scrim */}
-      <div className="absolute inset-0 z-0">
+      {/* Background Image: Clean Luxury Private Jet */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <img
-          src={heroJetSunset}
-          alt="Aurevia executive private jet parked on tarmac during sunset"
-          referrerPolicy="no-referrer"
-          className="w-full h-full object-cover object-center scale-100 animate-fade-in"
+          src={heroAircraft}
+          alt="Aurevia Luxury Private Jet"
+          className="w-full h-full object-cover object-center scale-105 filter brightness-[0.85] contrast-[1.05] transition-transform duration-1000 ease-out"
         />
-        {/* Measured dark luxury gradient overlay (60-30-10 color discipline) */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#12141C] via-[#12141C]/80 to-[#12141C]/50" />
-        <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#12141C]/40 to-[#12141C]/90" />
+
+        {/* Measured dark luxury gradient overlay preserving text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#12141C] via-[#12141C]/50 to-[#12141C]/30" />
+        <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#12141C]/30 to-[#12141C]/70" />
+        {/* Soft liquid brass ambient radiance accentuating the private jet */}
+        <div className="absolute top-0 right-0 w-2/3 h-2/3 bg-gradient-to-b from-[#B68A4E]/10 via-[#B68A4E]/5 to-transparent blur-3xl pointer-events-none" />
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-8 sm:pt-16">
-        <div className="max-w-3xl space-y-6">
-          {/* Eyebrow */}
-          <div className="scroll-reveal-subtle reveal-delay-100 flex items-center gap-3 text-xs tracking-[0.28em] text-[#D8B683] uppercase font-medium">
-            <span className="w-8 h-[1px] bg-[#B68A4E] inline-block" />
-            <span>Private charter, without compromise</span>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-8 sm:pt-14">
+        <div className="max-w-3xl space-y-7">
+          {/* Company Name in Cove Sans Font Typography with Hover Effect */}
+          <div className="scroll-reveal-header reveal-delay-120 pt-1">
+            <div 
+              className="group relative inline-block cursor-pointer select-none transition-all duration-500"
+              title="Aurevia Aviation — Hover to illuminate"
+            >
+              {/* Radial backdrop bloom on hover */}
+              <div 
+                className="absolute -inset-x-8 -inset-y-4 bg-gradient-to-r from-[#B68A4E]/0 via-[#B68A4E]/25 to-[#B68A4E]/0 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" 
+              />
+
+              <div className="relative flex items-center gap-3 sm:gap-4 flex-wrap">
+                {/* Cove Sans Font Typography with Interactive Hover Kerning & Micro-Elevations */}
+                <span className="font-cove font-medium tracking-[0.12em] sm:tracking-[0.18em] text-4xl sm:text-6xl lg:text-7xl uppercase text-[#F3F0E7] transition-all duration-700 ease-out group-hover:tracking-[0.16em] sm:group-hover:tracking-[0.22em] group-hover:text-white drop-shadow-md group-hover:drop-shadow-[0_0_35px_rgba(216,182,131,0.6)] flex items-center">
+                  {'AUREVIA'.split('').map((char, i) => (
+                    <span 
+                      key={i} 
+                      className="inline-block transition-transform duration-300 ease-out group-hover:-translate-y-1 hover:!text-[#D8B683]"
+                      style={{ transitionDelay: `${i * 25}ms` }}
+                    >
+                      {char}
+                    </span>
+                  ))}
+                </span>
+
+                {/* Modern Aviation Designation Badge */}
+                <div className="flex items-center gap-2 border-l border-[#B68A4E]/50 pl-3 sm:pl-4 transition-all duration-300 group-hover:border-[#D8B683]">
+                  <span className="font-mono text-xs sm:text-sm tracking-[0.35em] text-[#D8B683] uppercase font-medium group-hover:text-[#F3F0E7]">
+                    Aviation
+                  </span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 group-hover:scale-125 transition-transform" title="Valletta Desk Active" />
+                </div>
+              </div>
+
+              {/* Modern Shimmer Bar on Open & Hover */}
+              <div className="relative mt-2 h-[2px] w-full overflow-hidden bg-gradient-to-r from-[#1E2436]/0 via-[#1E2436] to-[#1E2436]/0">
+                <div className="absolute inset-0 w-1/2 bg-gradient-to-r from-transparent via-[#D8B683] to-transparent opacity-40 group-hover:opacity-100 transition-opacity duration-300 animate-shimmer-sweep" />
+              </div>
+            </div>
           </div>
 
-          {/* Primary Headline with text-wrap: balance */}
-          <div className="scroll-reveal-header reveal-delay-150 space-y-2">
-            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl text-[#F3F0E7] font-normal tracking-tight leading-[1.08] [text-wrap:balance]">
+          {/* Primary Slogan Headline: "Connect you to what matters" */}
+          <div className="scroll-reveal-header reveal-delay-150 space-y-3">
+            <h1 className="font-display text-3xl sm:text-5xl lg:text-6xl text-[#F3F0E7] font-normal tracking-tight leading-[1.12] [text-wrap:balance]">
               {sloganOptions[currentSloganIdx]}
             </h1>
 
             {/* Campaign Slogan Switcher (Quiet interactive control) */}
             <div className="pt-1 flex items-center gap-2 text-xs text-[#F3F0E7]/60">
-              <span className="text-[10px] uppercase tracking-wider text-[#D8B683]">Mantra:</span>
               <div className="flex items-center gap-1.5 flex-wrap">
                 {sloganOptions.map((s, idx) => (
                   <button
@@ -99,7 +135,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               onClick={onViewFleet}
               className="px-7 py-3.5 btn-glass-liquid text-[#F3F0E7] font-medium text-xs tracking-wider uppercase rounded-lg cursor-pointer"
             >
-              View the Fleet
+              View Aircraft Network
             </button>
           </div>
 
@@ -131,6 +167,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         <div className="flex items-center gap-2">
           <Sparkles className="w-3.5 h-3.5 text-[#B68A4E]" />
           <span>Zero Repositioning Markups for Members</span>
+        </div>
+        <div className="flex items-center gap-2 text-[#D8B683]/80">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#B68A4E] inline-block" />
+          <span className="font-mono text-[11px] tracking-wider uppercase">Kinetic Sky · Scroll to Navigate</span>
         </div>
       </div>
     </section>

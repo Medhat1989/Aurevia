@@ -26,7 +26,7 @@ export const Footer: React.FC<FooterProps> = ({
   };
 
   return (
-    <footer className="bg-[#0B0C11] text-[#F3F0E7] border-t border-[#1E2436] pt-20 pb-12">
+    <footer className="bg-[#0B0C11]/85 backdrop-blur-md text-[#F3F0E7] border-t border-[#1E2436]/60 pt-20 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Footer Marquee CTA: "Tell us where you're headed." */}
         <div className="scroll-reveal p-8 sm:p-12 rounded-2xl bg-gradient-to-r from-[#1E2436]/60 via-[#12141C] to-[#1E2436]/40 border border-[#B68A4E]/30 flex flex-col md:flex-row items-center justify-between gap-8">
@@ -71,7 +71,7 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Navigation Links */}
           <div className="space-y-3">
             <h4 className="text-[10px] uppercase tracking-[0.25em] text-[#D8B683] font-medium">
-              Aviation & Fleet
+              Aviation & Provider Network
             </h4>
             <ul className="space-y-2 text-xs text-[#F3F0E7]/70 font-light">
               <li>
@@ -184,7 +184,7 @@ export const Footer: React.FC<FooterProps> = ({
             {GLOBAL_HUBS.map((hub) => (
               <span key={hub.city} className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#B68A4E]" />
-                <strong className="text-[#F3F0E7] font-medium">{hub.city} Desk:</strong> {hub.address}
+                <strong className="text-[#F3F0E7] font-medium">Maltese Headquarters:</strong> {hub.address}
               </span>
             ))}
           </div>
@@ -217,7 +217,7 @@ export const Footer: React.FC<FooterProps> = ({
         <div className="flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#F3F0E7]/40 pt-4 border-t border-[#1E2436]/50">
           <span>© {new Date().getFullYear()} Aurevia Aviation. Developed by Medhat Khalil</span>
           <span className="font-light italic mt-1 sm:mt-0">
-            Aurevia arranges charter transport as an authorized agent for Part 135 & AOC air carriers.
+            Aurevia maintains a network of providers and arranges charter transport as an authorized agent for Part 135 & AOC air carriers.
           </span>
         </div>
       </div>

@@ -26,7 +26,7 @@ export const FAQSection: React.FC = () => {
   });
 
   return (
-    <section id="faq" className="py-24 bg-[#12141C] relative border-b border-[#1E2436]">
+    <section id="faq" className="py-24 bg-[#12141C]/80 backdrop-blur-md relative border-b border-[#1E2436]/60">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto">

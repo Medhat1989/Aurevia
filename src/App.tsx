@@ -14,6 +14,7 @@ import { Footer } from './components/Footer';
 import { AiConciergeWidget } from './components/AiConciergeWidget';
 import { LegalModal } from './components/LegalModal';
 import { CookieConsent } from './components/CookieConsent';
+import { VideoMotionBackground } from './components/VideoMotionBackground';
 import { useScrollRevealObserver } from './hooks/useScrollRevealObserver';
 
 export default function App() {
@@ -92,7 +93,10 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#12141C] text-[#F3F0E7] selection:bg-[#B68A4E]/30 selection:text-[#F3F0E7]">
+    <div className="min-h-screen bg-[#12141C] text-[#F3F0E7] selection:bg-[#B68A4E]/30 selection:text-[#F3F0E7] relative">
+      {/* Cinematic Video Motion Background (Parallax & Velocity Linked to Scroll) */}
+      <VideoMotionBackground />
+
       {/* Top Bar Navigation */}
       <Navigation
         currentSection={currentSection}

@@ -178,7 +178,7 @@ export const AiConciergeWidget: React.FC<AiConciergeWidgetProps> = ({ onOpenQuot
                 </h4>
                 <div className="flex items-center gap-1.5 mt-1 text-[10px] text-emerald-400 font-sans">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block animate-pulse" />
-                  <span>AI Assistant · Verified Fleet Knowledge</span>
+                  <span>AI Assistant · Verified Provider Network</span>
                 </div>
               </div>
             </div>
@@ -329,7 +329,7 @@ export const AiConciergeWidget: React.FC<AiConciergeWidgetProps> = ({ onOpenQuot
             >
               <input
                 type="text"
-                placeholder="Ask route, fleet, or pricing questions..."
+                placeholder="Ask route, aircraft, or provider network questions..."
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 className="flex-1 bg-[#1E2436] border border-[#1E2436] focus:border-[#B68A4E] rounded-lg py-2 px-3 text-xs text-[#F3F0E7] placeholder-[#F3F0E7]/40 outline-none"

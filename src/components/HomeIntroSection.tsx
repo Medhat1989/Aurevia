@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, Plane, Clock, ShieldCheck, Compass, Sparkles, HeartPulse, BookOpen } from 'lucide-react';
 import conciergeYacht from '../assets/images/concierge_yacht_helicopter_1790872712698.jpg';
-import specialMissionsImg from '../assets/images/special_missions_aircraft_1790872724587.jpg';
+import specialMissionsImg from '../assets/images/special_missions_clean_1791495372402.jpg';
 import { BRAND, INITIAL_JOURNAL_ARTICLES } from '../data/aureviaData';
 
 interface HomeIntroSectionProps {
@@ -32,9 +32,9 @@ export const HomeIntroSection: React.FC<HomeIntroSectionProps> = ({
   ];
 
   return (
-    <div className="bg-[#12141C] text-[#F3F0E7]">
+    <div className="text-[#F3F0E7]">
       {/* Positioning Section */}
-      <section className="py-24 border-b border-[#1E2436]">
+      <section className="py-24 border-b border-[#1E2436]/60 bg-[#12141C]/80 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5 space-y-4">
@@ -50,8 +50,8 @@ export const HomeIntroSection: React.FC<HomeIntroSectionProps> = ({
             <div className="lg:col-span-7 space-y-6 text-sm sm:text-base text-[#F3F0E7]/80 font-light leading-relaxed">
               <p className="scroll-reveal reveal-delay-200">
                 Commercial travel asks you to plan around it. Aurevia works the other way — we find the aircraft, 
-                the slot, and the route that fit the day you already have. Our team sources from a vetted network 
-                of operators across the globe, so you’re never limited to one fleet or one home base.
+                the slot, and the route that fit the day you already have. We have an extensive network of accredited 
+                providers across the globe, so you are never limited to one operator or one home base.
               </p>
               <p className="scroll-reveal reveal-delay-250">
                 Whether connecting Malta to Singapore overnight or positioning an air ambulance into an austere 
@@ -94,7 +94,7 @@ export const HomeIntroSection: React.FC<HomeIntroSectionProps> = ({
       </section>
 
       {/* Services Preview Teaser */}
-      <section className="py-20 border-b border-[#1E2436]">
+      <section className="py-20 border-b border-[#1E2436]/60 bg-[#171A24]/70 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
@@ -177,7 +177,7 @@ export const HomeIntroSection: React.FC<HomeIntroSectionProps> = ({
       </section>
 
       {/* Membership Teaser Highlighting Jubilee */}
-      <section className="py-20 border-b border-[#1E2436] bg-[#0E1017]">
+      <section className="py-20 border-b border-[#1E2436]/60 bg-[#0E1017]/75 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="scroll-reveal p-8 sm:p-12 rounded-2xl bg-gradient-to-br from-[#1E2436]/60 to-[#12141C] border border-[#B68A4E]/30 flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="space-y-3 max-w-2xl">
@@ -207,7 +207,7 @@ export const HomeIntroSection: React.FC<HomeIntroSectionProps> = ({
       </section>
 
       {/* Quote / Principle Band */}
-      <section className="py-20 bg-[#12141C] border-b border-[#1E2436] text-center">
+      <section className="py-20 bg-[#12141C]/75 backdrop-blur-md border-b border-[#1E2436]/60 text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
           <span className="scroll-reveal-subtle text-[10px] uppercase tracking-[0.25em] text-[#D8B683] font-medium block">
             Guiding Principle
@@ -222,7 +222,7 @@ export const HomeIntroSection: React.FC<HomeIntroSectionProps> = ({
       </section>
 
       {/* Journal Teaser */}
-      <section className="py-20 border-b border-[#1E2436]">
+      <section className="py-20 border-b border-[#1E2436]/60 bg-[#12141C]/75 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <div className="flex items-center justify-between">
             <div>

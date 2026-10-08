@@ -200,7 +200,7 @@ export const QuickQuoteEstimator: React.FC<QuickQuoteEstimatorProps> = ({ onConf
               Distance: <strong className="text-[#F3F0E7]">{activeRoute.distNm} NM</strong>
             </span>
             <span className="hidden sm:inline-flex items-center gap-1.5">
-              Recommended Fleet: <strong className="text-[#D8B683]">{activeRoute.rec}</strong>
+              Recommended Category: <strong className="text-[#D8B683]">{activeRoute.rec}</strong>
             </span>
           </div>
           <div className="flex items-center gap-1 text-[11px] text-[#B68A4E]">

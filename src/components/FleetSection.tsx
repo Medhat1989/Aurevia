@@ -18,20 +18,20 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ onCharterAircraft })
     : FLEET_DATA.filter((a) => a.category === activeCategory);
 
   return (
-    <section id="fleet" className="py-24 bg-[#12141C] relative border-b border-[#1E2436]">
+    <section id="fleet" className="py-24 bg-[#12141C]/80 backdrop-blur-md relative border-b border-[#1E2436]/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
           <div className="scroll-reveal-subtle reveal-delay-75 flex items-center gap-3 text-xs tracking-[0.25em] text-[#D8B683] uppercase font-medium mb-3">
             <span className="w-8 h-[1px] bg-[#B68A4E]/60 inline-block" />
-            <span>Vetted Global Network</span>
+            <span>Audited Provider Network</span>
           </div>
           <h2 className="scroll-reveal-header reveal-delay-150 font-display text-3xl sm:text-4xl lg:text-5xl text-[#F3F0E7] font-normal tracking-tight">
-            A fleet configured around your calendar.
+            We have a network of providers, configured around your calendar.
           </h2>
           <p className="scroll-reveal reveal-delay-200 text-sm sm:text-base text-[#F3F0E7]/70 mt-3 font-light leading-relaxed">
-            From short alpine hops to nonstop transpacific crossings. Sourced from an audited network 
-            of over 3,500 ARGUS Platinum and Wyvern-certified aircraft, ready for dispatch worldwide.
+            From short alpine hops to nonstop transpacific crossings. Sourced from our trusted network of providers 
+            with over 3,500 ARGUS Platinum and Wyvern-certified aircraft, ready for dispatch worldwide.
           </p>
         </div>
 
@@ -47,7 +47,7 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ onCharterAircraft })
                   : 'btn-glass-liquid text-[#F3F0E7]/70 hover:text-[#F3F0E7]'
               }`}
             >
-              {cat === 'All' ? 'Complete Fleet' : `${cat} Jets`}
+              {cat === 'All' ? 'All Provider Aircraft' : `${cat} Jets`}
             </button>
           ))}
         </div>
@@ -149,7 +149,7 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ onCharterAircraft })
               Need direct alpine altiport or yacht helideck access?
             </h4>
             <p className="text-xs text-[#F3F0E7]/70 font-light">
-              Our twin-engine Airbus ACH145 and Leonardo AW139 helicopters provide point-to-point transfers into Courchevel, St. Moritz, Monaco, and private yacht decks.
+              Our provider network includes twin-engine Airbus ACH145 and Leonardo AW139 helicopters, providing point-to-point transfers into Courchevel, St. Moritz, Monaco, and private yacht decks.
             </p>
           </div>
           <button

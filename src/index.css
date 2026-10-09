@@ -484,4 +484,58 @@ button:not(.no-glass) {
     0 0 45px rgba(182, 138, 78, 0.35);
 }
 
+/* ========================================================
+   Gold-Leaf Metallic Texture & Scroll Animation
+   ======================================================== */
+@keyframes gold-leaf-sweep {
+  0% {
+    transform: translateX(-160%) skewX(-20deg);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.85;
+  }
+  75% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateX(200%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+.gold-leaf-metallic-text {
+  /* Multi-stop hammered 24k gold leaf metallic gradient */
+  background-image: linear-gradient(
+    120deg,
+    #9b722d 0%,
+    #d4aa5d 10%,
+    #fff4d4 22%,
+    #d8b683 34%,
+    #7a5214 46%,
+    #fff8e2 58%,
+    #c4974f 70%,
+    #fae8be 82%,
+    #9b722d 94%,
+    #fff4d4 100%
+  );
+  background-size: 260% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+  will-change: background-position, filter;
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 16px rgba(216, 182, 131, 0.35));
+  transition: filter 0.5s cubic-bezier(0.16, 1, 0.3, 1), letter-spacing 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-leaf-metallic-text:hover {
+  filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 28px rgba(216, 182, 131, 0.9));
+}
+
+.gold-leaf-sweep-active {
+  animation: gold-leaf-sweep 1.8s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+}
+
 

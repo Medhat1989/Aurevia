@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
-import { Eye, EyeOff, Compass, Gauge, Play, Pause, ChevronUp, ChevronDown, Sparkles } from 'lucide-react';
 
 export type AtmosphereTheme = 'stratosphere' | 'golden_hour' | 'midnight';
 
@@ -31,17 +30,6 @@ export const VideoMotionBackground: React.FC<VideoMotionBackgroundProps> = ({
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [theme, setTheme] = useState<AtmosphereTheme>(initialTheme);
-  const [hudMinimized, setHudMinimized] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return window.innerWidth < 768;
-    }
-    return false;
-  });
-  const [currentAltitude, setCurrentAltitude] = useState(45000);
-  const [currentMach, setCurrentMach] = useState(0.88);
-  const [isUserScrolling, setIsUserScrolling] = useState(false);
-
-  // Physics & animation states tracked via refs to avoid re-render overhead in the 60fps loop
   const animStateRef = useRef({
     time: 0,
     scrollY: 0,
@@ -82,21 +70,6 @@ export const VideoMotionBackground: React.FC<VideoMotionBackgroundProps> = ({
       animStateRef.current.scrollVelocity = Math.min(15, Math.max(-15, velocity * 2.5));
       animStateRef.current.lastScrollY = currentY;
       animStateRef.current.lastScrollTime = now;
-
-      // Calculate dynamic altitude (from 45,000 FT at top down to 2,800 FT near bottom)
-      const calculatedAlt = Math.round(45000 - progress * 42200);
-      setCurrentAltitude(calculatedAlt);
-
-      // Boost Mach speed slightly on scroll
-      const velocityAbs = Math.min(0.08, Math.abs(velocity) * 0.04);
-      setCurrentMach(parseFloat((0.86 + velocityAbs).toFixed(2)));
-
-      setIsUserScrolling(true);
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        setIsUserScrolling(false);
-        setCurrentMach(0.88);
-      }, 350);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -104,7 +77,6 @@ export const VideoMotionBackground: React.FC<VideoMotionBackgroundProps> = ({
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      clearTimeout(scrollTimeout);
     };
   }, []);
 
@@ -431,127 +403,16 @@ export const VideoMotionBackground: React.FC<VideoMotionBackgroundProps> = ({
   }, [isPlaying, theme, initSimulation]);
 
   return (
-    <>
-      {/* Fixed Full-Screen Canvas Video Motion Background */}
-      <div 
-        className={`fixed inset-0 pointer-events-none z-0 overflow-hidden ${className}`}
-        aria-hidden="true"
-      >
-        <canvas
-          ref={canvasRef}
-          className="absolute inset-0 w-full h-full block object-cover will-change-transform"
-        />
-        {/* Soft atmospheric gradient sheen on top to bind typography */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#12141C]/40 via-transparent to-[#12141C]/80 pointer-events-none" />
-      </div>
-
-      {/* Floating Executive Flight Telemetry HUD & Scroll Motion Controls */}
-      <aside 
-        aria-label="Flight motion controls and telemetry"
-        className="fixed bottom-6 left-6 z-40 select-none font-sans"
-      >
-        <div className="backdrop-blur-xl bg-[#12141C]/85 border border-[#1E2436]/90 shadow-2xl rounded-2xl p-3 sm:p-3.5 text-[#F3F0E7] transition-all duration-300 max-w-[280px] sm:max-w-[320px]">
-          {/* Header Row */}
-          <div className="flex items-center justify-between gap-3 pb-2 border-b border-[#1E2436]/70">
-            <div className="flex items-center gap-2">
-              <span className={`w-2 h-2 rounded-full ${isUserScrolling ? 'bg-amber-400 animate-ping' : 'bg-emerald-400'} inline-block`} />
-              <div className="flex items-center gap-1.5">
-                <span className="text-[10px] tracking-[0.2em] uppercase font-semibold text-[#D8B683]">
-                  Kinetic Horizon
-                </span>
-                {hudMinimized && (
-                  <span className="text-[10px] text-[#F3F0E7]/80 font-mono pl-1.5 border-l border-[#1E2436]">
-                    {currentAltitude.toLocaleString()} FT
-                  </span>
-                )}
-              </div>
-            </div>
-
-            <div className="flex items-center gap-1">
-              <button
-                type="button"
-                onClick={() => setIsPlaying(!isPlaying)}
-                className="p-1 text-[#F3F0E7]/70 hover:text-[#D8B683] transition-colors rounded-md hover:bg-white/5 cursor-pointer"
-                title={isPlaying ? 'Pause Background Video Motion' : 'Play Background Video Motion'}
-                aria-label={isPlaying ? 'Pause motion' : 'Play motion'}
-              >
-                {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setHudMinimized(!hudMinimized)}
-                className="p-1 text-[#F3F0E7]/70 hover:text-[#D8B683] transition-colors rounded-md hover:bg-white/5 cursor-pointer"
-                title={hudMinimized ? 'Expand flight telemetry' : 'Collapse flight telemetry'}
-                aria-label={hudMinimized ? 'Expand flight telemetry' : 'Collapse flight telemetry'}
-              >
-                {hudMinimized ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
-              </button>
-            </div>
-          </div>
-
-          {/* Expanded Telemetry & Atmospheric Selection */}
-          {!hudMinimized && (
-            <div className="pt-2.5 space-y-2.5 text-xs">
-              {/* Telemetry Stats */}
-              <div className="grid grid-cols-2 gap-2">
-                <div className="bg-[#171A24]/70 rounded-lg p-2 border border-[#1E2436]/50">
-                  <div className="flex items-center gap-1 text-[10px] text-[#F3F0E7]/60 tracking-wider uppercase font-mono">
-                    <Compass className="w-3 h-3 text-[#D8B683]" />
-                    <span>Altitude</span>
-                  </div>
-                  <div className="text-sm font-semibold text-[#F3F0E7] mt-0.5 tracking-tight font-mono">
-                    {currentAltitude.toLocaleString()} <span className="text-[10px] font-normal text-[#F3F0E7]/60">FT</span>
-                  </div>
-                </div>
-
-                <div className="bg-[#171A24]/70 rounded-lg p-2 border border-[#1E2436]/50">
-                  <div className="flex items-center gap-1 text-[10px] text-[#F3F0E7]/60 tracking-wider uppercase font-mono">
-                    <Gauge className="w-3 h-3 text-[#D8B683]" />
-                    <span>Cruise Speed</span>
-                  </div>
-                  <div className="text-sm font-semibold text-[#F3F0E7] mt-0.5 tracking-tight font-mono">
-                    MACH {currentMach}
-                  </div>
-                </div>
-              </div>
-
-              {/* Scroll Motion Status */}
-              <div className="flex items-center justify-between text-[11px] text-[#F3F0E7]/80 px-1">
-                <span className="flex items-center gap-1.5">
-                  <Sparkles className="w-3 h-3 text-[#D8B683]" />
-                  <span>Scroll Parallax Motion</span>
-                </span>
-                <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded ${isUserScrolling ? 'bg-[#B68A4E]/30 text-[#D8B683] font-medium' : 'bg-white/5 text-[#F3F0E7]/60'}`}>
-                  {isUserScrolling ? 'SCROLLING' : 'CRUISING'}
-                </span>
-              </div>
-
-              {/* Atmospheric Mode Selector */}
-              <div className="pt-1 flex items-center gap-1.5">
-                {(['stratosphere', 'golden_hour', 'midnight'] as AtmosphereTheme[]).map((atm) => {
-                  const label = atm === 'stratosphere' ? 'Stratosphere' : atm === 'golden_hour' ? 'Golden Dusk' : 'Midnight';
-                  const active = theme === atm;
-                  return (
-                    <button
-                      key={atm}
-                      type="button"
-                      onClick={() => setTheme(atm)}
-                      className={`flex-1 py-1 px-1.5 text-[10px] tracking-wider uppercase rounded-md transition-all cursor-pointer font-medium ${
-                        active
-                          ? 'bg-[#B68A4E]/25 text-[#D8B683] border border-[#B68A4E]/40 font-semibold'
-                          : 'bg-white/5 text-[#F3F0E7]/60 hover:text-[#F3F0E7] border border-transparent'
-                      }`}
-                    >
-                      {label}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-        </div>
-      </aside>
-    </>
+    <div 
+      className={`fixed inset-0 pointer-events-none z-0 overflow-hidden ${className}`}
+      aria-hidden="true"
+    >
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full block object-cover will-change-transform"
+      />
+      {/* Soft atmospheric gradient sheen on top to bind typography */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#12141C]/40 via-transparent to-[#12141C]/80 pointer-events-none" />
+    </div>
   );
 };
